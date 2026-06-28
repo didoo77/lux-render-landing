@@ -4,13 +4,9 @@ const navLinks=document.querySelector('.nav-links');
 
 window.addEventListener('scroll',()=>{
   if(!nav)return;
-  if(window.scrollY>20){
-    nav.style.background='rgba(5,7,10,.92)';
-    nav.style.borderColor='rgba(126,231,255,.22)';
-  }else{
-    nav.style.background='rgba(5,7,10,.74)';
-    nav.style.borderColor='rgba(255,255,255,.13)';
-  }
+  const active=window.scrollY>20;
+  nav.style.background=active?'rgba(5,7,10,.92)':'rgba(5,7,10,.74)';
+  nav.style.borderColor=active?'rgba(126,231,255,.22)':'rgba(255,255,255,.13)';
 });
 
 if(menuToggle&&navLinks){
@@ -26,15 +22,4 @@ if(menuToggle&&navLinks){
   });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-  link.addEventListener('click',event=>{
-    const target=document.querySelector(link.getAttribute('href'));
-    if(!target)return;
-    event.preventDefault();
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-  });
-});
-
-document.querySelectorAll('.reveal').forEach((item,index)=>{
-  setTimeout(()=>item.classList.add('visible'),80+index*40);
-});
+document.querySelectorAll('.reveal').forEach(item=>item.classList.add('visible'));
