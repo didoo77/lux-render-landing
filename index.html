@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lux Render: IA aplicada, marketing visual, agentes omnicanal y sistemas de captación para negocios locales." />
+  <meta name="description" content="Lux Render: IA aplicada, marketing visual y sistemas de captación para negocios que quieren generar más consultas reales." />
   <title>Lux Render | IA & Captación</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,53 +11,50 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="noise"></div>
   <div class="site-shell">
     <header class="nav">
-      <a class="brand" href="#inicio" aria-label="Lux Render inicio">
+      <a class="brand" href="./" aria-label="Lux Render inicio">
         <img src="assets/lux_render_logo.png" alt="Lux Render" onerror="this.style.display='none'">
         <span>Lux Render</span>
       </a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#sistema">Sistema</a>
-        <a href="#conserje">Conserje Neural</a>
-        <a href="#planes">Planes</a>
-        <a href="#proceso">Proceso</a>
+        <a class="active" href="./">Inicio</a>
+        <a href="conserje.html">Conserje Neural</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="planes.html">Planes</a>
       </nav>
-      <a class="nav-cta" href="#diagnostico">Solicitar diagnóstico</a>
+      <a class="nav-cta" href="diagnostico.html">Solicitar diagnóstico</a>
     </header>
 
     <main>
-      <section id="inicio" class="hero">
-        <div class="hero-copy">
+      <section class="hero hero-compact">
+        <div class="hero-copy reveal">
           <div class="eyebrow">IA aplicada · Marketing visual · Captación digital</div>
-          <h1>Construimos sistemas para captar, atender y convertir mejor.</h1>
-          <p class="hero-lead">
-            Lux Render combina presencia visual, páginas de captación y agentes IA omnicanal para que negocios reales generen consultas, reservas y oportunidades comerciales desde sus canales digitales.
-          </p>
-
+          <h1>Tu negocio no necesita más ruido. Necesita una ruta que convierta.</h1>
+          <p class="hero-lead">Lux Render diseña presencia visual, landings y agentes IA omnicanal para que negocios reales conviertan atención en consultas, reservas y oportunidades comerciales.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#diagnostico">Quiero un diagnóstico</a>
-            <a class="btn secondary" href="#conserje">Ver Conserje Neural</a>
+            <a class="btn primary" href="diagnostico.html">Quiero diagnóstico</a>
+            <a class="btn secondary" href="conserje.html">Ver Conserje Neural</a>
           </div>
-
           <div class="trust-row" aria-label="Áreas de implementación">
             <span>Restaurantes</span><span>Clínicas</span><span>Gimnasios</span><span>Hostales</span><span>Servicios</span>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Vista del sistema Lux Render">
+        <aside class="hero-panel product-panel reveal delay-1" aria-label="Sistema Lux Render">
           <div class="panel-glow"></div>
-          <div class="founder-card">
+          <div class="founder-card compact-card">
             <img src="assets/esteban_profile.png" alt="Esteban, fundador de Lux Render" onerror="this.style.display='none'">
             <div>
               <strong>Esteban · Lux Render</strong>
-              <span>Dirección comercial y visual</span>
+              <span>Dirección comercial, visual e IA aplicada</span>
             </div>
           </div>
-
-          <div class="system-card">
+          <div class="command-card neural-wave">
             <div class="system-card-top"><span class="pulse"></span><p>Sistema activo</p></div>
-            <h2>Ruta de captación</h2>
+            <h2>Arquitectura de captación</h2>
             <ul class="flow-list">
               <li><span>01</span> Perfil claro</li>
               <li><span>02</span> Contenido con intención</li>
@@ -69,122 +66,71 @@
         </aside>
       </section>
 
-      <section class="problem section">
-        <div class="section-heading">
+      <section class="section snap-section">
+        <div class="section-heading narrow reveal">
           <span class="section-kicker">El problema real</span>
-          <h2>Muchos negocios no pierden clientes por falta de contenido. Los pierden por una ruta digital poco clara.</h2>
+          <h2>Muchos negocios no pierden clientes por falta de contenido. Los pierden porque la ruta digital no está diseñada para vender.</h2>
+          <p>El cliente entra, mira dos segundos, no entiende la oferta, no confía, no sabe qué hacer y se va. Lux Render ordena esa ruta.</p>
         </div>
-        <div class="problem-grid">
-          <article><span>01</span><h3>El perfil no explica rápido</h3><p>La persona entra, mira dos segundos y no entiende bien qué ofrecen, para quién es, cómo reservar o por qué debería confiar.</p></article>
-          <article><span>02</span><h3>Las consultas llegan desordenadas</h3><p>Mensajes repetidos, datos incompletos, reservas sin contexto y oportunidades que se pierden por no tener seguimiento.</p></article>
-          <article><span>03</span><h3>La IA se usa como juguete</h3><p>Un bot básico no resuelve la operación. El valor está en entender intención, tomar datos, priorizar y derivar con control humano.</p></article>
+        <div class="problem-grid compact-grid">
+          <article class="reveal"><span>01</span><h3>Perfil poco claro</h3><p>No explica rápido qué vendes, para quién es y por qué deberían elegirte.</p></article>
+          <article class="reveal delay-1"><span>02</span><h3>Consultas desordenadas</h3><p>Mensajes repetidos, datos incompletos y oportunidades sin seguimiento.</p></article>
+          <article class="reveal delay-2"><span>03</span><h3>IA sin operación</h3><p>Un bot básico no alcanza. El valor está en atender, calificar, registrar y derivar.</p></article>
         </div>
       </section>
 
-      <section id="sistema" class="system section">
-        <div class="section-heading narrow">
+      <section class="section route-section">
+        <div class="section-heading narrow reveal">
           <span class="section-kicker">Sistema Lux Render</span>
-          <h2>No hacemos piezas sueltas. Diseñamos una arquitectura de captación.</h2>
-          <p>Ordenamos la presencia digital para que cada punto tenga una función: atraer atención, explicar la oferta, reducir dudas, capturar datos y abrir conversaciones útiles.</p>
+          <h2>Una web más corta. Un sistema más profundo.</h2>
+          <p>Ahora cada parte importante vive en su propia página. Así puedes enviar el link correcto según el prospecto y evitar scroll infinito.</p>
         </div>
-
-        <div class="architecture">
+        <div class="architecture reveal delay-1">
           <div class="arch-node">Instagram</div><div class="arch-line"></div>
           <div class="arch-node">Bio</div><div class="arch-line"></div>
-          <div class="arch-node">Contenido</div><div class="arch-line"></div>
           <div class="arch-node">Landing</div><div class="arch-line"></div>
           <div class="arch-node highlight">Agente IA</div><div class="arch-line"></div>
-          <div class="arch-node">Registro</div><div class="arch-line"></div>
+          <div class="arch-node">Seguimiento</div><div class="arch-line"></div>
           <div class="arch-node">Venta</div>
         </div>
-
-        <div class="service-grid">
-          <article class="service-card"><div class="icon">✦</div><h3>Marketing visual</h3><p>Perfil, contenido, carruseles, reels, historias y piezas comerciales con una línea visual más clara y vendible.</p></article>
-          <article class="service-card"><div class="icon">◦</div><h3>Landing de captación</h3><p>Página profesional y simple para ordenar servicios, beneficios, prueba visual, preguntas frecuentes y acción.</p></article>
-          <article class="service-card"><div class="icon">⚡</div><h3>Agentes IA omnicanal</h3><p>Atención automatizada y asistida en canales digitales para consultas, reservas, toma de datos y derivación humana.</p></article>
-          <article class="service-card"><div class="icon">↳</div><h3>Optimización comercial</h3><p>Bio, destacadas, mensajes, CTA, estructura de oferta y seguimiento para que el perfil trabaje mejor.</p></article>
+        <div class="portal-grid">
+          <a class="portal-card reveal" href="conserje.html"><small>Producto IA</small><h3>Conserje Neural</h3><p>Agente omnicanal para atención, reservas, cotizaciones y oportunidades.</p><span>Entrar →</span></a>
+          <a class="portal-card reveal delay-1" href="servicios.html"><small>Sistema comercial</small><h3>Servicios</h3><p>Marketing visual, landing, contenido, optimización y arquitectura digital.</p><span>Entrar →</span></a>
+          <a class="portal-card reveal delay-2" href="planes.html"><small>Inversión</small><h3>Planes</h3><p>Implementación inicial, operación mensual y sistemas IA cotizados por flujo.</p><span>Entrar →</span></a>
         </div>
       </section>
 
-      <section id="conserje" class="neural section">
-        <div class="neural-copy">
-          <span class="section-kicker">Producto IA</span>
-          <h2>Conserje Neural</h2>
-          <p class="big">Un agente IA omnicanal para atender, calificar y ordenar oportunidades desde redes, web y mensajería.</p>
-          <p>No es un chatbot básico. Es una capa de inteligencia comercial que entiende intención, toma datos, agenda, registra oportunidades y deriva al equipo cuando hace falta criterio humano.</p>
-          <div class="neural-actions">
-            <a class="btn primary" href="#diagnostico">Pedir demo</a>
-            <a class="btn ghost" href="#inteligencia">Ver inteligencia del negocio</a>
+      <section class="section neural-highlight split-card reveal">
+        <div>
+          <span class="section-kicker">Conserje Neural</span>
+          <h2>El diferencial no es responder mensajes. Es entender intención comercial.</h2>
+          <p>Mientras atiende, el sistema clasifica intención, solicita datos, registra oportunidad y prepara el siguiente paso para el equipo humano.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="conserje.html">Ver producto IA</a>
+            <a class="btn ghost" href="diagnostico.html">Solicitar demo</a>
           </div>
         </div>
-
-        <div class="neural-ui" aria-label="Demo visual de Conserje Neural">
-          <div class="ui-header"><span></span><span></span><span></span><strong>Conserje Neural · Operación en vivo</strong></div>
-          <div class="conversation">
-            <div class="message in"><small>Instagram DM</small><p>Hola, ¿tienen disponibilidad para reservar hoy a las 21:00?</p></div>
-            <div class="message out"><small>Agente IA</small><p>Sí, puedo ayudarte. ¿Para cuántas personas sería la reserva?</p></div>
-            <div class="message in"><small>Cliente</small><p>Para 4 personas. ¿Tienen terraza?</p></div>
-            <div class="message out"><small>Agente IA</small><p>Perfecto. Tenemos terraza según disponibilidad. Te pido nombre y teléfono para dejar la solicitud registrada.</p></div>
-          </div>
-          <div class="crm-strip">
-            <div><span>Intención</span><strong>Reserva</strong></div>
-            <div><span>Prioridad</span><strong>Alta</strong></div>
-            <div><span>Estado</span><strong>Datos solicitados</strong></div>
-          </div>
+        <div class="mini-dashboard neural-wave" aria-label="Panel de inteligencia">
+          <div class="metric"><span>Origen</span><strong>Instagram DM</strong></div>
+          <div class="metric"><span>Intención</span><strong>Reserva</strong></div>
+          <div class="metric"><span>Prioridad</span><strong>Alta</strong></div>
+          <div class="metric"><span>Estado</span><strong>Datos solicitados</strong></div>
         </div>
       </section>
 
-      <section id="inteligencia" class="intelligence section">
-        <div class="section-heading narrow">
-          <span class="section-kicker">Inteligencia del negocio</span>
-          <h2>Mientras atiende, el sistema interpreta intención, prioriza oportunidades y deja información útil para vender mejor.</h2>
+      <section class="cta-section neural-wave reveal">
+        <div>
+          <span class="section-kicker">Diagnóstico</span>
+          <h2>Antes de venderte algo, revisamos dónde se está perdiendo la oportunidad.</h2>
+          <p>Perfil, contenido, landing, mensajes, ruta a contacto e IA. Te digo qué falta, qué sobra y qué construiría primero.</p>
         </div>
-        <div class="intel-grid">
-          <article><h3>Detecta intención</h3><p>Identifica si el cliente quiere reservar, cotizar, consultar precios, pedir disponibilidad o necesita atención humana.</p></article>
-          <article><h3>Ordena datos</h3><p>Solicita nombre, contacto, fecha, servicio, cantidad de personas, sucursal o datos clave según el negocio.</p></article>
-          <article><h3>Registra oportunidad</h3><p>Deja cada conversación preparada para seguimiento: estado, prioridad, origen, valor potencial y siguiente paso.</p></article>
-          <article><h3>Deriva con criterio</h3><p>Cuando el caso requiere sensibilidad, precio especial o decisión humana, el agente deriva al equipo sin perder contexto.</p></article>
-        </div>
-      </section>
-
-      <section id="planes" class="plans section">
-        <div class="section-heading"><span class="section-kicker">Formas de trabajo</span><h2>Implementación clara. Operación mensual. IA como apalancamiento.</h2></div>
-        <div class="plan-grid">
-          <article class="plan-card"><span class="plan-label">Implementación inicial</span><h3>Landing de captación</h3><p class="price">Desde $100.000 a $220.000 CLP</p><p>Página profesional y simple para explicar la oferta, reducir dudas y llevar al cliente hacia consulta, reserva o cotización.</p><ul><li>Arquitectura comercial</li><li>Textos orientados a conversión</li><li>Servicios, beneficios y prueba visual</li><li>Botón directo a canal de contacto</li></ul></article>
-          <article class="plan-card featured"><span class="plan-label">Operación comercial visual</span><h3>Plan mensual</h3><p class="price">Desde $200.000 CLP mensual</p><p>Presencia activa, contenido, optimización y seguimiento para negocios que quieren verse más claros y generar más oportunidades.</p><ul><li>Estrategia mensual</li><li>Contenido comercial</li><li>Bio, destacadas y ruta digital</li><li>Seguimiento y ajustes básicos</li></ul></article>
-          <article class="plan-card"><span class="plan-label">Sistema IA</span><h3>Conserje Neural</h3><p class="price">Cotización según flujo y canales</p><p>Agente IA omnicanal para atención, reservas, toma de datos, clasificación de intención y derivación humana.</p><ul><li>Flujos por nicho</li><li>Canales digitales</li><li>Registro de oportunidades</li><li>Control humano y mejora continua</li></ul></article>
-        </div>
-        <p class="plans-note">Publicidad, herramientas externas, integraciones avanzadas y producción presencial se cotizan aparte.</p>
-      </section>
-
-      <section id="proceso" class="process section">
-        <div class="section-heading narrow"><span class="section-kicker">Proceso</span><h2>Primero entendemos la ruta actual. Después construimos lo que falta.</h2></div>
-        <div class="process-list">
-          <article><span>01</span><h3>Diagnóstico</h3><p>Revisamos perfil, bio, destacadas, contenido, landing, mensajes y puntos de fricción.</p></article>
-          <article><span>02</span><h3>Arquitectura</h3><p>Definimos oferta, CTA, estructura de captación y qué debe hacer cada pieza dentro del sistema.</p></article>
-          <article><span>03</span><h3>Implementación</h3><p>Construimos landing, contenido, ruta digital o agente IA según la necesidad real del negocio.</p></article>
-          <article><span>04</span><h3>Optimización</h3><p>Revisamos respuesta, consultas, fricciones y próximos ajustes para mejorar la operación.</p></article>
-        </div>
-      </section>
-
-      <section class="faq section">
-        <div class="section-heading"><span class="section-kicker">Preguntas útiles</span><h2>Antes de empezar</h2></div>
-        <div class="faq-list">
-          <details><summary>¿Esto reemplaza al equipo humano?</summary><p>No. La IA asiste, ordena y automatiza partes repetitivas. Los casos importantes o sensibles se derivan al equipo humano con contexto.</p></details>
-          <details><summary>¿Necesito tener una web grande?</summary><p>No. En muchos casos basta una landing profesional y simple, pensada para explicar lo clave y llevar a consulta, reserva o cotización.</p></details>
-          <details><summary>¿Puedo partir solo con diagnóstico o landing?</summary><p>Sí. La implementación puede partir por la ruta más urgente: perfil, landing, contenido o agente, según el punto de mayor fricción.</p></details>
-        </div>
-      </section>
-
-      <section id="diagnostico" class="cta-section">
-        <div><span class="section-kicker">Siguiente paso</span><h2>Veamos dónde se está perdiendo la atención de tu negocio.</h2><p>Solicita un diagnóstico breve. Revisamos tu perfil, ruta de captación y oportunidades para convertir mejor desde canales digitales.</p></div>
-        <a class="btn primary large" href="https://www.instagram.com/lux.render/" target="_blank" rel="noreferrer">Solicitar diagnóstico por Instagram</a>
+        <a class="btn primary large" href="diagnostico.html">Solicitar diagnóstico</a>
       </section>
     </main>
 
     <footer class="footer">
-      <div><strong>Lux Render</strong><p>IA aplicada, marketing visual y sistemas de captación para negocios reales.</p></div>
-      <a href="#inicio">Volver arriba ↑</a>
+      <div><strong>Lux Render</strong><p>IA aplicada, marketing visual y sistemas de captación.</p></div>
+      <a href="https://www.instagram.com/lux.render/" target="_blank" rel="noopener">@lux.render</a>
     </footer>
   </div>
   <script src="app.js"></script>
