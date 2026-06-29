@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Solicita una revision comercial de tu Instagram, web o ruta digital con Lux Render.">
+  <meta name="description" content="Solicita una revisión comercial de tu Instagram, web o ruta digital con Lux Render.">
   <title>Contacto | Lux Render</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand.css?v=6" data-lux-brand="true">
+  <link rel="stylesheet" href="polish.css?v=3" data-lux-polish="true">
   <style>
     .contact-hero .hero-lead{max-width:720px}
     .contact-social-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0 18px;max-width:660px}
@@ -13,11 +15,11 @@
     .contact-social-grid .social-btn:hover{transform:translateY(-2px);background:linear-gradient(180deg,rgba(255,255,255,.105),rgba(255,255,255,.045))}
     .contact-social-grid .social-mark{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;color:var(--cyan)}
     .contact-social-grid .social-mark svg{width:24px;height:24px;display:block;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .contact-social-grid .facebook .social-mark{color:#b9c7ff}
+    .contact-social-grid .email .social-mark{color:var(--gold)}
     .contact-social-grid .social-label{display:grid;gap:1px;line-height:1.1}
     .contact-social-grid .social-label strong{font-size:14px;color:var(--text)}
     .contact-social-grid .social-label small{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:.04em;text-transform:uppercase}
-    .contact-social-grid .facebook .social-mark{color:#b9c7ff}
-    .contact-social-grid .email .social-mark{color:var(--gold)}
     .contact-note{max-width:660px;margin:0;color:var(--muted);font-size:14px}
     .diagnostic-card .signal-list{margin-top:18px}
     .diagnostic-card .signal-list li{border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:10px}
@@ -35,8 +37,8 @@
       <section class="hero hero-compact contact-hero">
         <div class="hero-copy">
           <div class="eyebrow">Diagnóstico comercial</div>
-          <h1>Antes de construir, detectamos dónde se pierde la oportunidad.</h1>
-          <p class="hero-lead">Envíame tu Instagram, web o perfil comercial. Revisamos claridad de oferta, confianza visual, contenido, ruta a consulta y puntos donde el cliente se puede enfriar antes de escribir.</p>
+          <h1>Envíame tu Instagram o web. Detecto dónde se pierde la consulta.</h1>
+          <p class="hero-lead">Revisamos claridad de oferta, confianza visual, contenido, ruta a contacto y puntos donde el cliente se enfría antes de escribir. La idea no es venderte de inmediato: es decirte qué conviene construir primero.</p>
           <div class="contact-social-grid" aria-label="Canales oficiales Lux Render">
             <a class="social-btn instagram" href="https://www.instagram.com/luxrender.ai/" target="_blank" rel="noopener" aria-label="Abrir Instagram de Lux Render">
               <span class="social-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.4"></circle><circle cx="16.7" cy="7.3" r=".7" fill="currentColor" stroke="none"></circle></svg></span>
@@ -51,17 +53,17 @@
               <span class="social-label"><strong>Email</strong><small>diagnóstico</small></span>
             </a>
           </div>
-          <p class="contact-note">Primera revisión sin fricción: no vendemos una pieza al azar; primero detectamos qué activo conviene construir para generar más consultas reales.</p>
+          <p class="contact-note">Primera revisión simple: vemos el negocio como cliente, detectamos el punto de fuga y recomendamos el activo con más sentido comercial.</p>
         </div>
         <aside class="diagnostic-card neural-wave">
           <span class="section-kicker">Qué revisamos</span>
           <h2>Ruta digital</h2>
           <ul class="signal-list">
-            <li>Claridad de oferta y primera impresión</li>
-            <li>Confianza visual del perfil o web</li>
-            <li>Bio, destacados y llamados a consulta</li>
-            <li>Ruta a reserva, cotización o WhatsApp</li>
-            <li>Oportunidad para IA, automatización o seguimiento</li>
+            <li>Primera impresión y confianza visual</li>
+            <li>Oferta: qué vendes, para quién y por qué elegirte</li>
+            <li>Bio, destacados, contenido y llamados a consulta</li>
+            <li>Camino hacia reserva, cotización o WhatsApp</li>
+            <li>Oportunidad para página de captación, IA o seguimiento</li>
           </ul>
           <div class="contact-proof" aria-label="Resultado de la revisión">
             <span>Punto de fuga</span>
@@ -73,20 +75,14 @@
       <section class="cta-section neural-wave">
         <div>
           <span class="section-kicker">Siguiente paso</span>
-          <h2>Envíame tu Instagram o web y lo reviso con criterio comercial.</h2>
-          <p>Te respondo con una lectura clara: qué está frenando confianza, dónde se pierde la consulta y qué construir primero para captar mejor.</p>
+          <h2>Manda el link. Te respondo con una lectura clara.</h2>
+          <p>Qué está frenando confianza, dónde se pierde la consulta y qué construir primero para captar mejor sin gastar en piezas innecesarias.</p>
         </div>
         <a class="btn primary large" href="https://www.instagram.com/luxrender.ai/" target="_blank" rel="noopener">Solicitar revisión</a>
       </section>
     </main>
-    <footer class="footer">
-      <div>
-        <strong>Lux Render</strong>
-        <p>IA aplicada, marketing visual y sistemas de captación.</p>
-      </div>
-      <a href="https://www.instagram.com/luxrender.ai/" target="_blank" rel="noopener">@luxrender.ai</a>
-    </footer>
+    <footer class="footer"></footer>
   </div>
-  <script src="app.js"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>
