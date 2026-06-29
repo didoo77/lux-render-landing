@@ -6,17 +6,42 @@
   --brand-violet:#8d6bff;
 }
 
-.site-shell{position:relative;z-index:1}
-.noise{
+html,body{min-height:100%}
+body{position:relative}
+body::before,body::after{
+  content:"";
+  position:fixed;
+  inset:-18%;
+  pointer-events:none;
   z-index:0;
+  mix-blend-mode:screen;
+}
+body::before{
+  background:
+    radial-gradient(circle at 18% 18%,rgba(142,238,255,.18),transparent 22rem),
+    radial-gradient(circle at 82% 24%,rgba(216,185,111,.13),transparent 24rem),
+    radial-gradient(circle at 48% 86%,rgba(141,107,255,.14),transparent 28rem);
+  opacity:.46;
+  filter:saturate(1.05);
+  animation:luxPageBreath 17s ease-in-out infinite;
+}
+body::after{
+  inset:-34%;
+  background:linear-gradient(118deg,transparent 0%,transparent 40%,rgba(142,238,255,.12) 47%,rgba(246,242,232,.08) 50%,rgba(216,185,111,.09) 53%,transparent 61%,transparent 100%);
+  opacity:.22;
+  transform:translateX(-38%) rotate(5deg);
+  animation:luxPageCurrent 14.5s cubic-bezier(.2,.7,.2,1) infinite;
+}
+.site-shell{position:relative;z-index:2}
+.noise{
+  z-index:1;
   opacity:1;
   background:
-    radial-gradient(circle at 16% 12%,rgba(142,238,255,.13),transparent 18rem),
-    radial-gradient(circle at 84% 18%,rgba(216,185,111,.10),transparent 20rem),
-    radial-gradient(circle at 50% 92%,rgba(141,107,255,.11),transparent 24rem),
-    linear-gradient(115deg,transparent 0%,rgba(142,238,255,.035) 42%,rgba(246,242,232,.028) 50%,rgba(216,185,111,.035) 58%,transparent 100%);
+    radial-gradient(circle at 16% 12%,rgba(142,238,255,.08),transparent 18rem),
+    radial-gradient(circle at 84% 18%,rgba(216,185,111,.07),transparent 20rem),
+    radial-gradient(circle at 50% 92%,rgba(141,107,255,.08),transparent 24rem);
   mix-blend-mode:screen;
-  animation:luxAmbientPulse 18s ease-in-out infinite;
+  animation:luxAmbientPulse 22s ease-in-out infinite;
 }
 
 .nav{
@@ -24,7 +49,7 @@
   height:72px;
   padding:10px 18px;
   border-color:rgba(142,238,255,.16);
-  animation:luxNavBreath 9s ease-in-out infinite;
+  animation:luxNavBreath 12s ease-in-out infinite;
 }
 
 .brand{gap:12px;min-width:0}
@@ -39,7 +64,7 @@
   border:1px solid rgba(142,238,255,.34);
   box-shadow:0 0 0 1px rgba(216,185,111,.12),0 12px 32px rgba(0,0,0,.42),0 0 26px rgba(142,238,255,.11);
   display:block;
-  animation:luxLogoPulse 7.5s ease-in-out infinite;
+  animation:luxLogoPulse 9.5s ease-in-out infinite;
 }
 .brand span{
   color:var(--brand-cream);
@@ -70,14 +95,14 @@
   pointer-events:none;
   border-radius:inherit;
   background:
-    radial-gradient(circle at 18% 0%,rgba(142,238,255,.16),transparent 36%),
-    linear-gradient(120deg,transparent 0%,rgba(255,255,255,.035) 42%,rgba(216,185,111,.06) 50%,rgba(142,238,255,.035) 58%,transparent 100%);
-  opacity:.26;
+    radial-gradient(circle at 18% 0%,rgba(142,238,255,.14),transparent 36%),
+    linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 42%,rgba(216,185,111,.045) 50%,rgba(142,238,255,.025) 58%,transparent 100%);
+  opacity:.14;
   transform:translate3d(0,0,0);
-  animation:luxCardBreath 8.5s ease-in-out infinite;
+  animation:luxCardBreath 16s ease-in-out infinite;
 }
-.portal-card:nth-child(2n)::before,.service-card:nth-child(2n)::before,.plan-card:nth-child(2n)::before,.case-card:nth-child(2n)::before,.intel-grid article:nth-child(2n)::before{animation-name:luxCardPulseGold;animation-duration:10.5s}
-.portal-card:nth-child(3n)::before,.service-card:nth-child(3n)::before,.plan-card:nth-child(3n)::before,.case-card:nth-child(3n)::before,.intel-grid article:nth-child(3n)::before{animation-name:luxCardPulseViolet;animation-duration:12s}
+.portal-card:nth-child(2n)::before,.service-card:nth-child(2n)::before,.plan-card:nth-child(2n)::before,.case-card:nth-child(2n)::before,.intel-grid article:nth-child(2n)::before{animation-name:luxCardPulseGold;animation-duration:18s}
+.portal-card:nth-child(3n)::before,.service-card:nth-child(3n)::before,.plan-card:nth-child(3n)::before,.case-card:nth-child(3n)::before,.intel-grid article:nth-child(3n)::before{animation-name:luxCardPulseViolet;animation-duration:20s}
 
 .btn,.social-btn,.nav-cta,.menu-toggle{position:relative;overflow:hidden}
 .btn.primary::after,.nav-cta::after,.social-btn::after{
@@ -85,49 +110,60 @@
   position:absolute;
   inset:-45%;
   pointer-events:none;
-  background:linear-gradient(105deg,transparent 0%,transparent 42%,rgba(255,255,255,.0) 45%,rgba(255,255,255,.34) 50%,rgba(255,255,255,0) 56%,transparent 100%);
+  background:linear-gradient(105deg,transparent 0%,transparent 42%,rgba(255,255,255,.0) 45%,rgba(255,255,255,.22) 50%,rgba(255,255,255,0) 56%,transparent 100%);
   transform:translateX(-72%) rotate(8deg);
-  animation:luxIntentSweep 6.8s cubic-bezier(.2,.7,.2,1) infinite;
+  animation:luxIntentSweep 9.8s cubic-bezier(.2,.7,.2,1) infinite;
 }
-.social-btn::after{animation-duration:9.2s;opacity:.55}
-.nav-cta::after{animation-duration:7.8s;opacity:.6}
+.social-btn::after{animation-duration:12.5s;opacity:.4}
+.nav-cta::after{animation-duration:10.5s;opacity:.42}
 
 .eyebrow::before,.section-kicker::before,.pulse{
-  animation:luxDotPulse 3.2s ease-in-out infinite;
+  animation:luxDotPulse 3.6s ease-in-out infinite;
 }
 
-.neural-wave::after{animation-duration:7.2s}
+.neural-wave::after{animation-duration:8.4s;opacity:.5}
 
+@keyframes luxPageBreath{
+  0%,100%{transform:scale(1) translate3d(0,0,0);filter:hue-rotate(0deg) saturate(1);opacity:.38}
+  34%{transform:scale(1.035) translate3d(1.5%,-1%,0);filter:hue-rotate(7deg) saturate(1.12);opacity:.56}
+  68%{transform:scale(1.018) translate3d(-1%,1.2%,0);filter:hue-rotate(-6deg) saturate(1.04);opacity:.43}
+}
+@keyframes luxPageCurrent{
+  0%,58%{transform:translateX(-44%) rotate(5deg);opacity:0}
+  66%{opacity:.28}
+  82%{opacity:.16}
+  98%,100%{transform:translateX(44%) rotate(5deg);opacity:0}
+}
 @keyframes luxAmbientPulse{
-  0%,100%{filter:hue-rotate(0deg) saturate(1);transform:scale(1);opacity:.72}
-  35%{filter:hue-rotate(9deg) saturate(1.12);transform:scale(1.035);opacity:.88}
-  68%{filter:hue-rotate(-8deg) saturate(1.04);transform:scale(1.015);opacity:.76}
+  0%,100%{filter:hue-rotate(0deg) saturate(1);transform:scale(1);opacity:.54}
+  35%{filter:hue-rotate(9deg) saturate(1.1);transform:scale(1.025);opacity:.72}
+  68%{filter:hue-rotate(-8deg) saturate(1.04);transform:scale(1.012);opacity:.58}
 }
 @keyframes luxNavBreath{
   0%,100%{box-shadow:0 18px 60px rgba(0,0,0,.34),0 0 0 rgba(142,238,255,0)}
-  50%{box-shadow:0 20px 70px rgba(0,0,0,.42),0 0 28px rgba(142,238,255,.08)}
+  50%{box-shadow:0 20px 70px rgba(0,0,0,.42),0 0 24px rgba(142,238,255,.07)}
 }
 @keyframes luxLogoPulse{
   0%,100%{box-shadow:0 0 0 1px rgba(216,185,111,.12),0 12px 32px rgba(0,0,0,.42),0 0 20px rgba(142,238,255,.08);transform:scale(1)}
-  50%{box-shadow:0 0 0 1px rgba(142,238,255,.28),0 14px 36px rgba(0,0,0,.46),0 0 32px rgba(142,238,255,.22);transform:scale(1.018)}
+  50%{box-shadow:0 0 0 1px rgba(142,238,255,.28),0 14px 36px rgba(0,0,0,.46),0 0 32px rgba(142,238,255,.22);transform:scale(1.012)}
 }
 @keyframes luxCardBreath{
-  0%,100%{opacity:.16;transform:translateX(-2%) scale(1)}
-  48%{opacity:.36;transform:translateX(2%) scale(1.015)}
+  0%,100%{opacity:.09;transform:translateX(-1%) scale(1)}
+  50%{opacity:.18;transform:translateX(1%) scale(1.006)}
 }
 @keyframes luxCardPulseGold{
-  0%,100%{opacity:.14;filter:hue-rotate(0deg);transform:translateY(0) scale(1)}
-  50%{opacity:.34;filter:hue-rotate(20deg);transform:translateY(-1%) scale(1.012)}
+  0%,100%{opacity:.08;filter:hue-rotate(0deg);transform:translateY(0) scale(1)}
+  50%{opacity:.17;filter:hue-rotate(14deg);transform:translateY(-.5%) scale(1.006)}
 }
 @keyframes luxCardPulseViolet{
-  0%,100%{opacity:.12;filter:hue-rotate(0deg);transform:scale(1)}
-  50%{opacity:.3;filter:hue-rotate(-32deg);transform:scale(1.018)}
+  0%,100%{opacity:.075;filter:hue-rotate(0deg);transform:scale(1)}
+  50%{opacity:.16;filter:hue-rotate(-24deg);transform:scale(1.008)}
 }
 @keyframes luxIntentSweep{
-  0%,58%{transform:translateX(-72%) rotate(8deg);opacity:0}
-  66%{opacity:.75}
-  80%{opacity:.25}
-  96%,100%{transform:translateX(72%) rotate(8deg);opacity:0}
+  0%,64%{transform:translateX(-72%) rotate(8deg);opacity:0}
+  72%{opacity:.48}
+  84%{opacity:.18}
+  98%,100%{transform:translateX(72%) rotate(8deg);opacity:0}
 }
 @keyframes luxDotPulse{
   0%,100%{box-shadow:0 0 0 0 rgba(216,185,111,.0);filter:saturate(1)}
@@ -141,16 +177,18 @@
 }
 
 @media(max-width:640px){
-  .noise{opacity:.58;animation-duration:22s}
+  body::before{opacity:.42;animation-duration:20s}
+  body::after{opacity:.18;animation-duration:18s}
+  .noise{opacity:.5;animation-duration:24s}
   .nav{top:9px;min-height:62px;height:62px;border-radius:24px}
   .brand{gap:10px}
-  .brand-logo{width:36px;height:36px;flex-basis:36px;animation-duration:9s}
+  .brand-logo{width:36px;height:36px;flex-basis:36px;animation-duration:11s}
   .brand span{font-size:14px;max-width:150px;overflow:hidden;text-overflow:ellipsis}
   .menu-toggle{width:42px;height:42px;border-radius:15px}
-  .hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{opacity:.18;animation-duration:11s}
-  .btn.primary::after,.nav-cta::after,.social-btn::after{animation-duration:10s;opacity:.42}
+  .hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{opacity:.11;animation-duration:18s}
+  .btn.primary::after,.nav-cta::after,.social-btn::after{animation-duration:12s;opacity:.32}
 }
 
 @media(prefers-reduced-motion:reduce){
-  .noise,.nav,.brand-logo,.neural-wave::after,.pulse,.eyebrow::before,.section-kicker::before,.btn.primary::after,.nav-cta::after,.social-btn::after,.hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{animation:none!important}
+  body::before,body::after,.noise,.nav,.brand-logo,.neural-wave::after,.pulse,.eyebrow::before,.section-kicker::before,.btn.primary::after,.nav-cta::after,.social-btn::after,.hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{animation:none!important}
 }
