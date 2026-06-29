@@ -1,12 +1,12 @@
 const brandLink=document.createElement('link');
 brandLink.rel='stylesheet';
-brandLink.href='brand.css?v=5';
+brandLink.href='brand.css?v=6';
 brandLink.setAttribute('data-lux-brand','true');
 if(!document.querySelector('link[data-lux-brand]')) document.head.appendChild(brandLink);
 
 const polishLink=document.createElement('link');
 polishLink.rel='stylesheet';
-polishLink.href='polish.css?v=2';
+polishLink.href='polish.css?v=3';
 polishLink.setAttribute('data-lux-polish','true');
 if(!document.querySelector('link[data-lux-polish]')) document.head.appendChild(polishLink);
 
