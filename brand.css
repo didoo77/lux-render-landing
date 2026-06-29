@@ -3,6 +3,20 @@
   --brand-navy:#07121a;
   --brand-cyan:#8eeeff;
   --brand-gold:#d8b96f;
+  --brand-violet:#8d6bff;
+}
+
+.site-shell{position:relative;z-index:1}
+.noise{
+  z-index:0;
+  opacity:1;
+  background:
+    radial-gradient(circle at 16% 12%,rgba(142,238,255,.13),transparent 18rem),
+    radial-gradient(circle at 84% 18%,rgba(216,185,111,.10),transparent 20rem),
+    radial-gradient(circle at 50% 92%,rgba(141,107,255,.11),transparent 24rem),
+    linear-gradient(115deg,transparent 0%,rgba(142,238,255,.035) 42%,rgba(246,242,232,.028) 50%,rgba(216,185,111,.035) 58%,transparent 100%);
+  mix-blend-mode:screen;
+  animation:luxAmbientPulse 18s ease-in-out infinite;
 }
 
 .nav{
@@ -10,13 +24,10 @@
   height:72px;
   padding:10px 18px;
   border-color:rgba(142,238,255,.16);
+  animation:luxNavBreath 9s ease-in-out infinite;
 }
 
-.brand{
-  gap:12px;
-  min-width:0;
-}
-
+.brand{gap:12px;min-width:0}
 .brand-logo{
   width:44px;
   height:44px;
@@ -28,8 +39,8 @@
   border:1px solid rgba(142,238,255,.34);
   box-shadow:0 0 0 1px rgba(216,185,111,.12),0 12px 32px rgba(0,0,0,.42),0 0 26px rgba(142,238,255,.11);
   display:block;
+  animation:luxLogoPulse 7.5s ease-in-out infinite;
 }
-
 .brand span{
   color:var(--brand-cream);
   font-size:15px;
@@ -43,53 +54,103 @@
   border-color:rgba(142,238,255,.36);
   background:linear-gradient(135deg,rgba(142,238,255,.14),rgba(216,185,111,.08));
 }
-
 .menu-toggle{
   border-color:rgba(142,238,255,.24);
   background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035));
 }
 
+.hero-panel,.command-card,.neural-ui,.plan-card,.service-card,.problem-grid article,.intel-grid article,.portal-card,.mini-dashboard,.split-card,.case-card,.diagnostic-card,.cta-section,.metric,.message,.contact-social-grid .social-btn,.contact-proof span{
+  position:relative;
+  overflow:hidden;
+}
+.hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+  background:
+    radial-gradient(circle at 18% 0%,rgba(142,238,255,.16),transparent 36%),
+    linear-gradient(120deg,transparent 0%,rgba(255,255,255,.035) 42%,rgba(216,185,111,.06) 50%,rgba(142,238,255,.035) 58%,transparent 100%);
+  opacity:.26;
+  transform:translate3d(0,0,0);
+  animation:luxCardBreath 8.5s ease-in-out infinite;
+}
+.portal-card:nth-child(2n)::before,.service-card:nth-child(2n)::before,.plan-card:nth-child(2n)::before,.case-card:nth-child(2n)::before,.intel-grid article:nth-child(2n)::before{animation-name:luxCardPulseGold;animation-duration:10.5s}
+.portal-card:nth-child(3n)::before,.service-card:nth-child(3n)::before,.plan-card:nth-child(3n)::before,.case-card:nth-child(3n)::before,.intel-grid article:nth-child(3n)::before{animation-name:luxCardPulseViolet;animation-duration:12s}
+
+.btn,.social-btn,.nav-cta,.menu-toggle{position:relative;overflow:hidden}
+.btn.primary::after,.nav-cta::after,.social-btn::after{
+  content:"";
+  position:absolute;
+  inset:-45%;
+  pointer-events:none;
+  background:linear-gradient(105deg,transparent 0%,transparent 42%,rgba(255,255,255,.0) 45%,rgba(255,255,255,.34) 50%,rgba(255,255,255,0) 56%,transparent 100%);
+  transform:translateX(-72%) rotate(8deg);
+  animation:luxIntentSweep 6.8s cubic-bezier(.2,.7,.2,1) infinite;
+}
+.social-btn::after{animation-duration:9.2s;opacity:.55}
+.nav-cta::after{animation-duration:7.8s;opacity:.6}
+
+.eyebrow::before,.section-kicker::before,.pulse{
+  animation:luxDotPulse 3.2s ease-in-out infinite;
+}
+
+.neural-wave::after{animation-duration:7.2s}
+
+@keyframes luxAmbientPulse{
+  0%,100%{filter:hue-rotate(0deg) saturate(1);transform:scale(1);opacity:.72}
+  35%{filter:hue-rotate(9deg) saturate(1.12);transform:scale(1.035);opacity:.88}
+  68%{filter:hue-rotate(-8deg) saturate(1.04);transform:scale(1.015);opacity:.76}
+}
+@keyframes luxNavBreath{
+  0%,100%{box-shadow:0 18px 60px rgba(0,0,0,.34),0 0 0 rgba(142,238,255,0)}
+  50%{box-shadow:0 20px 70px rgba(0,0,0,.42),0 0 28px rgba(142,238,255,.08)}
+}
+@keyframes luxLogoPulse{
+  0%,100%{box-shadow:0 0 0 1px rgba(216,185,111,.12),0 12px 32px rgba(0,0,0,.42),0 0 20px rgba(142,238,255,.08);transform:scale(1)}
+  50%{box-shadow:0 0 0 1px rgba(142,238,255,.28),0 14px 36px rgba(0,0,0,.46),0 0 32px rgba(142,238,255,.22);transform:scale(1.018)}
+}
+@keyframes luxCardBreath{
+  0%,100%{opacity:.16;transform:translateX(-2%) scale(1)}
+  48%{opacity:.36;transform:translateX(2%) scale(1.015)}
+}
+@keyframes luxCardPulseGold{
+  0%,100%{opacity:.14;filter:hue-rotate(0deg);transform:translateY(0) scale(1)}
+  50%{opacity:.34;filter:hue-rotate(20deg);transform:translateY(-1%) scale(1.012)}
+}
+@keyframes luxCardPulseViolet{
+  0%,100%{opacity:.12;filter:hue-rotate(0deg);transform:scale(1)}
+  50%{opacity:.3;filter:hue-rotate(-32deg);transform:scale(1.018)}
+}
+@keyframes luxIntentSweep{
+  0%,58%{transform:translateX(-72%) rotate(8deg);opacity:0}
+  66%{opacity:.75}
+  80%{opacity:.25}
+  96%,100%{transform:translateX(72%) rotate(8deg);opacity:0}
+}
+@keyframes luxDotPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(216,185,111,.0);filter:saturate(1)}
+  45%{box-shadow:0 0 0 7px rgba(216,185,111,.12);filter:saturate(1.2)}
+}
+
 @media(max-width:980px){
-  .nav{
-    height:66px;
-    min-height:66px;
-    grid-template-columns:minmax(0,1fr) 44px;
-    padding:10px 11px 10px 13px;
-  }
-  .brand-logo{
-    width:38px;
-    height:38px;
-    flex-basis:38px;
-  }
-  .brand span{
-    font-size:14px;
-  }
+  .nav{height:66px;min-height:66px;grid-template-columns:minmax(0,1fr) 44px;padding:10px 11px 10px 13px}
+  .brand-logo{width:38px;height:38px;flex-basis:38px}
+  .brand span{font-size:14px}
 }
 
 @media(max-width:640px){
-  .nav{
-    top:9px;
-    min-height:62px;
-    height:62px;
-    border-radius:24px;
-  }
-  .brand{
-    gap:10px;
-  }
-  .brand-logo{
-    width:36px;
-    height:36px;
-    flex-basis:36px;
-  }
-  .brand span{
-    font-size:14px;
-    max-width:150px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-  }
-  .menu-toggle{
-    width:42px;
-    height:42px;
-    border-radius:15px;
-  }
+  .noise{opacity:.58;animation-duration:22s}
+  .nav{top:9px;min-height:62px;height:62px;border-radius:24px}
+  .brand{gap:10px}
+  .brand-logo{width:36px;height:36px;flex-basis:36px;animation-duration:9s}
+  .brand span{font-size:14px;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+  .menu-toggle{width:42px;height:42px;border-radius:15px}
+  .hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{opacity:.18;animation-duration:11s}
+  .btn.primary::after,.nav-cta::after,.social-btn::after{animation-duration:10s;opacity:.42}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .noise,.nav,.brand-logo,.neural-wave::after,.pulse,.eyebrow::before,.section-kicker::before,.btn.primary::after,.nav-cta::after,.social-btn::after,.hero-panel::before,.command-card::before,.neural-ui::before,.plan-card::before,.service-card::before,.problem-grid article::before,.intel-grid article::before,.portal-card::before,.mini-dashboard::before,.split-card::before,.case-card::before,.diagnostic-card::before,.cta-section::before,.metric::before,.message::before,.contact-social-grid .social-btn::before{animation:none!important}
 }
