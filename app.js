@@ -6,7 +6,7 @@ if(!document.querySelector('link[data-lux-brand]')) document.head.appendChild(br
 
 const polishLink=document.createElement('link');
 polishLink.rel='stylesheet';
-polishLink.href='polish.css?v=1';
+polishLink.href='polish.css?v=2';
 polishLink.setAttribute('data-lux-polish','true');
 if(!document.querySelector('link[data-lux-polish]')) document.head.appendChild(polishLink);
 
