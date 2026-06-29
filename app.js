@@ -1,6 +1,6 @@
 const brandLink=document.createElement('link');
 brandLink.rel='stylesheet';
-brandLink.href='brand.css?v=3';
+brandLink.href='brand.css?v=4';
 brandLink.setAttribute('data-lux-brand','true');
 if(!document.querySelector('link[data-lux-brand]')) document.head.appendChild(brandLink);
 
@@ -18,6 +18,22 @@ if(nav){
   '<a'+active('planes.html')+' href="planes.html">Planes</a>'+
   '<a'+active('contacto.html')+' href="contacto.html">Contacto</a>'+
   '</nav><a class="nav-cta" href="contacto.html">Solicitar revisión</a>';
+}
+
+const footer=document.querySelector('.footer');
+if(footer){
+  footer.innerHTML='<div class="footer-main">'+
+    '<a class="footer-brand" href="./" aria-label="Lux Render inicio"><img src="assets/lux_render_mark.svg" alt="Lux Render" width="46" height="46" decoding="async"><span><strong>Lux Render</strong><small>IA aplicada · Marketing visual · Captación digital</small></span></a>'+
+    '<div class="footer-social" aria-label="Redes oficiales Lux Render">'+
+      '<a href="https://www.instagram.com/luxrender.ai/" target="_blank" rel="noopener">Instagram</a>'+
+      '<a href="https://www.facebook.com/luxrenderai/" target="_blank" rel="noopener">Facebook</a>'+
+      '<a href="mailto:luxrender.estudio@gmail.com">Email</a>'+
+    '</div>'+
+  '</div>'+
+  '<div class="footer-bottom">'+
+    '<span>© 2026 Lux Render. Todos los derechos reservados.</span>'+
+    '<span>V Región, Chile · Servicios digitales para negocios en todo Chile.</span>'+
+  '</div>';
 }
 
 const menuToggle=document.querySelector('.menu-toggle');
