@@ -1,3 +1,9 @@
+const brandLink=document.createElement('link');
+brandLink.rel='stylesheet';
+brandLink.href='brand.css?v=1';
+brandLink.setAttribute('data-lux-brand','true');
+if(!document.querySelector('link[data-lux-brand]')) document.head.appendChild(brandLink);
+
 const page=window.location.pathname.split('/').pop()||'index.html';
 const nav=document.querySelector('.nav');
 
