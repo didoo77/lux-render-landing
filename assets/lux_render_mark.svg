@@ -1,36 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
   <title id="title">Lux Render</title>
-  <desc id="desc">Logo circular Lux Render adaptado a paleta dark tech premium.</desc>
+  <desc id="desc">Marca circular Lux Render adaptada a paleta dark tech premium.</desc>
   <defs>
-    <radialGradient id="bg" cx="34%" cy="24%" r="82%">
-      <stop offset="0" stop-color="#182937"/>
-      <stop offset="0.52" stop-color="#08121A"/>
+    <radialGradient id="bg" cx="35%" cy="25%" r="82%">
+      <stop offset="0" stop-color="#193241"/>
+      <stop offset="0.54" stop-color="#08131B"/>
       <stop offset="1" stop-color="#05070A"/>
     </radialGradient>
-    <linearGradient id="ring" x1="24" y1="18" x2="136" y2="142" gradientUnits="userSpaceOnUse">
+    <linearGradient id="ring" x1="24" y1="16" x2="138" y2="144" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F6F2E8"/>
-      <stop offset="0.44" stop-color="#8EEEFF"/>
+      <stop offset="0.48" stop-color="#8EEEFF"/>
       <stop offset="1" stop-color="#D8B96F"/>
     </linearGradient>
-    <linearGradient id="text" x1="46" y1="42" x2="114" y2="123" gradientUnits="userSpaceOnUse">
+    <linearGradient id="text" x1="48" y1="42" x2="112" y2="113" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="0.54" stop-color="#F6F2E8"/>
+      <stop offset="0.58" stop-color="#F6F2E8"/>
       <stop offset="1" stop-color="#D8B96F"/>
     </linearGradient>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#8EEEFF" flood-opacity="0.22"/>
-      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#000000" flood-opacity="0.42"/>
+    <filter id="glow" x="-28%" y="-28%" width="156%" height="156%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#8EEEFF" flood-opacity="0.24"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
     </filter>
   </defs>
   <circle cx="80" cy="80" r="76" fill="url(#bg)"/>
-  <circle cx="80" cy="80" r="72" fill="none" stroke="url(#ring)" stroke-width="2.8" filter="url(#softGlow)"/>
-  <circle cx="80" cy="80" r="62.5" fill="none" stroke="#F6F2E8" stroke-width="1.15" opacity="0.62"/>
-  <circle cx="43" cy="48" r="3.1" fill="#D8B96F" opacity="0.92"/>
-  <circle cx="117" cy="48" r="3.1" fill="#8EEFFF" opacity="0.9"/>
-  <circle cx="43" cy="121" r="3.1" fill="#8EEFFF" opacity="0.82"/>
-  <circle cx="117" cy="121" r="3.1" fill="#D8B96F" opacity="0.92"/>
-  <text x="80" y="75" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="800" letter-spacing="1.6" fill="url(#text)">LUX</text>
-  <text x="80" y="101" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#F6F2E8">Render</text>
-  <line x1="44" y1="111" x2="116" y2="111" stroke="#D8B96F" stroke-width="1.7" stroke-linecap="round" opacity="0.9"/>
-  <text x="80" y="128" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8.2" font-weight="800" letter-spacing="2.4" fill="#8EEEFF">MARKETING VISUAL</text>
+  <circle cx="80" cy="80" r="72" fill="none" stroke="url(#ring)" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="80" cy="80" r="61.5" fill="none" stroke="#F6F2E8" stroke-width="1.1" opacity="0.58"/>
+  <circle cx="45" cy="50" r="2.8" fill="#D8B96F" opacity="0.9"/>
+  <circle cx="115" cy="50" r="2.8" fill="#8EEEFF" opacity="0.9"/>
+  <circle cx="45" cy="118" r="2.8" fill="#8EEEFF" opacity="0.78"/>
+  <circle cx="115" cy="118" r="2.8" fill="#D8B96F" opacity="0.9"/>
+  <text x="80" y="76" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="800" letter-spacing="1.2" fill="url(#text)">LUX</text>
+  <text x="80" y="102" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-style="italic" fill="#F6F2E8">Render</text>
+  <line x1="48" y1="113" x2="112" y2="113" stroke="#D8B96F" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
 </svg>
