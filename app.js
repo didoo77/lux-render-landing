@@ -1,8 +1,14 @@
 const brandLink=document.createElement('link');
 brandLink.rel='stylesheet';
-brandLink.href='brand.css?v=4';
+brandLink.href='brand.css?v=5';
 brandLink.setAttribute('data-lux-brand','true');
 if(!document.querySelector('link[data-lux-brand]')) document.head.appendChild(brandLink);
+
+const polishLink=document.createElement('link');
+polishLink.rel='stylesheet';
+polishLink.href='polish.css?v=1';
+polishLink.setAttribute('data-lux-polish','true');
+if(!document.querySelector('link[data-lux-polish]')) document.head.appendChild(polishLink);
 
 const page=window.location.pathname.split('/').pop()||'index.html';
 const nav=document.querySelector('.nav');
