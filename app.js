@@ -3,9 +3,9 @@ const nav=document.querySelector('.nav');
 
 if(nav){
   function active(name){return page===name?' class="active"':'';}
-  nav.innerHTML='<a class="brand" href="./"><img class="brand-logo" src="assets/lux_render_mark.svg" alt="Lux Render"><span>Lux Render</span></a>'+
-  '<button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>'+
-  '<nav class="nav-links" aria-label="Navegacion principal">'+
+  nav.innerHTML='<a class="brand" href="./" aria-label="Volver al inicio de Lux Render"><img class="brand-logo" src="assets/lux_render_mark.svg" width="44" height="44" alt="Lux Render" decoding="async"><span>Lux Render</span></a>'+
+  '<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>'+
+  '<nav class="nav-links" aria-label="Navegación principal">'+
   '<a'+active('index.html')+' href="./">Inicio</a>'+
   '<a'+active('conserje.html')+' href="conserje.html">Conserje Neural</a>'+
   '<a'+active('servicio.html')+' href="servicio.html">Servicios</a>'+
